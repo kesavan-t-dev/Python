@@ -24,7 +24,7 @@
 
 ##Version_2 is negative numbers are considered as a normal numbers
 
-
+"""
 num_input = input('Enter a number: ')
 num = int(num_input)
 
@@ -43,12 +43,12 @@ while i < len(num_input):
     i += 1
 
 n = total
+
+temp = 0
 while n >= 10:
-    temp = 0
-    while n > 0:
-        temp += n % 10
-        n //= 10
-    n = temp
+    temp += n % 10
+    n //= 10
+n = temp
 
 print(n)
 if n == 1:
@@ -56,8 +56,25 @@ if n == 1:
 else:
     print(f"{num_input} is NOT a Magic Number")
 
-
+"""
 
 
 ## Armstrong number
 
+
+num = int(input("Enter a number: "))
+if num < 0:
+    print("Armstrong numbers are non-negative.")
+    exit()
+
+digits = str(num)
+power = len(digits)
+
+total = 0
+for d in digits:
+    total += int(d) ** power
+
+if total == num:
+    print(f"{num} is an Armstrong number.")
+else:
+    print(f"{num} is NOT an Armstrong number.")
