@@ -237,13 +237,25 @@ print()
 # # # # # # # # # ### # # # # # # # # # # # # # # # # # # # ### # # # # # # # # # ## # # # # # # # # ### # # # # # # # # # #
 # now we move to the selection statements 
 # first is if else 
-val = input("Enter a password :")
-if len(val) >= 8:  # checking the length of the password  
-  # outer if block  
-  if any(char.isdigit() for char in val): # checking if the password consists of any numeral value  
-    # inner if block  
-    print("Password is Strong")
-  else:
-    print("password is contain one number")
-else:
-  print("Password is must in above 8 character(s)")
+# val = input("Enter a password :")
+#if len(val) >= 8:  # checking the length of the password
+#  # outer if block
+#  if any(char.isdigit() for char in val): # checking if the password consists of any numeral value
+#    # inner if block
+#    print("Password is Strong")
+#  else:
+#    print("password is contain one number")
+#else:
+#  print("Password is must in above 8 character(s)")
+
+
+##for loop
+a = range(1,10,2)
+print(list(a))
+
+##for loop
+# we can iterate them
+for i in range(1,10,2):
+  print(i)
+for j in range(1,10,2):
+  print(j)
