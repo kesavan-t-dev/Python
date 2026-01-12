@@ -250,12 +250,53 @@ print()
 
 
 ##for loop
-a = range(1,10,2)
-print(list(a))
+#a = range(1,10,2)
+#print(list(a))
 
 ##for loop
 # we can iterate them
-for i in range(1,10,2):
-  print(i)
-for j in range(1,10,2):
-  print(j)
+#for i in range(1,10,2):
+#  print(i)
+#for j in range(1,10,2):
+#  print(j)
+
+#list - mutable, and it changes the values for the object
+lists = [2,3,46,87,89]
+print(lists[3])
+
+#set -  immutable, and it doesn't change the value for the object it creates a new object for every variable assign or reassign show error or add can't be done.
+example_set = {"object","values","object","new word","another object"}
+print(example_set)
+
+#tuple - immutable, and it can't change values once initialized or declared it can't change like immutable list with parenthesis
+example_tuple = (23,) # if we give a single value as a tuple we can give the trailing comma's to know the memory it is an tuple without comma's it is a int data type
+print(example_tuple)
+print(type(example_tuple))
+
+example_tuple = (23,12,45,654.65,87)
+print(example_tuple)
+print(type(example_tuple))
+
+
+#dictionary - it is a collection of key-value pair , each key is associated with value and it has the number, string, list, tuple or another dictionary
+#dict[key] - syntax
+person = {
+  'name' : 'Mark',
+  'age': '25',
+  'gender' : 'Male',
+  'favourite_color': ['blue','white'],
+  'status':'active'
+}
+print(person)
+print(type(person))
+print(person['name'])
+print(person['age'])
+print(person['favourite_color'])
+person['gender'] = 'Female'
+print(person['gender'])
+persons_list = person.items()
+print(persons_list)
+
+for key,values in persons_list:
+  print('My {} is {}'.format(key,values))
+
