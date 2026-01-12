@@ -7,6 +7,7 @@
 ###Version_1 avoid negative numbers
 
 # n = int(input('Enter a number: '))
+# original = n
 # n = abs(n)
 # while n >= 10:
 #   total = 0
@@ -16,25 +17,46 @@
 #   n = total
 
 # if(n == 1):
-#   print(f"{n} is a Magic Number")
+#   print(f"{original} is a Magic Number")
 # else:
-#   print(f"{n} is NOT a Magic Number")
+#   print(f"{original} is NOT a Magic Number")
 
 
 ##Version_2 is negative numbers are considered as a normal numbers
 
 
-n = int(input("Enter a number: "))
-n = abs(n)
-original = n  
-while n > 9:
-    n = n // 10 
-    n = n % 10  
+num_input = input('Enter a number: ')
+num = int(num_input)
 
-if n == 1:
-    print(f"{original} is a Magic Number")
+i = 0
+total = 0
+
+if num_input[0] == "-":
+    total = -int(num_input[1])  
+    i = 2 
 else:
-    print(f"{original} is NOT a Magic Number")
+    total = int(num_input[0])  
+    i = 1
+
+while i < len(num_input):
+    total += int(num_input[i])
+    i += 1
+
+n = total
+while n >= 10:
+    temp = 0
+    while n > 0:
+        temp += n % 10
+        n //= 10
+    n = temp
+
+print(n)
+if n == 1:
+    print(f"{num_input} is a Magic Number")
+else:
+    print(f"{num_input} is NOT a Magic Number")
+
+
 
 
 ## Armstrong number
