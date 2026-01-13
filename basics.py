@@ -300,3 +300,25 @@ print(persons_list)
 for key,values in persons_list:
   print('My {} is {}'.format(key,values))
 
+
+################################################################################################################################################
+#map function - functional programming use list, array, other iterable and other three common used techniques like map, reduce, reduce
+def square(number):      #------------> transformation function 
+    return number ** 2
+
+numbers = [1, 2, 3, 4, 5]
+
+squared = map(square, numbers)
+
+list_1 = list(squared)
+
+print(square, "function direct print")
+print(type(square), "type of function")
+
+print(squared, "map direct print (iterator already consumed)")
+print(type(squared), "type of squared")
+
+squared = map(square, numbers)
+print(list(squared), "show the output of squared")
+print(type(list(squared)), "type of the squared list")
+## here is the sample in this we don't use the explicit loop we use the map and 
