@@ -67,6 +67,18 @@ if num < 0:
     print("Armstrong numbers are non-negative.")
     exit()
 
+# num = number2 = num
+# sum = 0
+# count = 0
+# while(num > 0):
+#    count = count + 1
+#    num = num//10
+
+# while number2 > 0:
+#    remainder = number2 % 10
+#    sum += remainder ** count
+#    number2 //= 10
+
 digits = str(num)
 power = len(digits)
 
