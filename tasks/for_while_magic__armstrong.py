@@ -1,9 +1,6 @@
 # Magic number in python
 
 
-#for loop version
-
-
 ###Version_1 avoid negative numbers
 
 # n = int(input('Enter a number: '))
@@ -24,10 +21,9 @@
 
 ##Version_2 is negative numbers are considered as a normal numbers
 
-"""
 num_input = input('Enter a number: ')
 num = int(num_input)
-
+temp = 0
 i = 0
 total = 0
 
@@ -44,30 +40,26 @@ while i < len(num_input):
 
 n = total
 
-temp = 0
 while n >= 10:
     temp += n % 10
     n //= 10
-n = temp
+temp = n
 
-print(n)
 if n == 1:
     print(f"{num_input} is a Magic Number")
 else:
     print(f"{num_input} is NOT a Magic Number")
 
-"""
 
 
 ## Armstrong number
 
+# num = int(input("Enter a number: "))
+# if num < 0:
+#     print("Armstrong numbers are non-negative.")
+#     exit()
 
-num = int(input("Enter a number: "))
-if num < 0:
-    print("Armstrong numbers are non-negative.")
-    exit()
-
-# num = number2 = num
+# val = number2 = num
 # sum = 0
 # count = 0
 # while(num > 0):
@@ -78,15 +70,7 @@ if num < 0:
 #    remainder = number2 % 10
 #    sum += remainder ** count
 #    number2 //= 10
-
-digits = str(num)
-power = len(digits)
-
-total = 0
-for d in digits:
-    total += int(d) ** power
-  
-if total == num:
-    print(f"{num} is an Armstrong number.")
-else:
-    print(f"{num} is NOT an Armstrong number.")
+# if val == sum:
+#     print(f"{val} is an Armstrong number.")
+# else:
+#     print(f"{val} is NOT an Armstrong number.")
