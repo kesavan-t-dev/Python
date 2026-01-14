@@ -1,11 +1,13 @@
-from files import multiply, add, names
+from files.multiply import multiply
+from files.add import process_numbers as add
+from files.names import names
 
 def main():
     print("Program started this is from main program.")
     
-    #FUNCTION 1 name standard break point: 
-    for name in ["hi", "hellow", "how"]:
-        print(names(name))
+    # #FUNCTION 1 name standard break point: 
+    # for name in ["hi", "hellow", "how"]:
+    #     print(names(name))
 
     # Function breakpoint: multiply
     result = multiply(5, 6)
@@ -16,5 +18,5 @@ def main():
     total = add(numbers)
     print("Total sum:", total)
 
-x = main()
-print(x)
+if __name__ == "__main__":
+    main()

@@ -5,5 +5,5 @@ Docstring for bkp.files.multiply
 '''
 
 def multiply(a, b):
-    prin("Error placed here ")
+    print("Error placed here ")
     return a * b  # <--  Function breakpoint target
