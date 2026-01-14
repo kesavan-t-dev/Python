@@ -363,3 +363,45 @@ print(next(counter))
 for num in counter:
     # print(num)
     pass
+#_______________we now know about inner function and closures
+"""
+in Decorator we must to know what is inner function and closure and then we can 
+understand the decorator 
+in INNER FUNCTION how its works
+A closure in Python is a function that remembers the environment in which it was created, 
+even after that environment is no longer active. This means a nested function can "close over" variables 
+from its enclosing scope and continue to use them.
+
+Closures are essential for understanding decorators because decorators rely on the ability 
+of a nested wrapper function to access and modify the state of the enclosing decorator function.
+
+"""
+# _________ This is inner function sample
+def outer_function(message):
+    def inner_function():
+        print(f"Message from closure: {message}")
+    return inner_function
+
+closure_function = outer_function("Hello, closures!")
+closure_function()
+# Output: Message from closure: Hello, closures!
+
+
+#then we move the decorator example
+#anology of a decorator
+def simple_decorator(func):
+    def wrapper():
+        print("Before the function call")
+        func()
+        print("After the function call")
+    return wrapper
+
+@simple_decorator
+def greet():
+    print("Hello!")
+
+greet()
+# Output:
+# Before the function call
+# Hello!
+# After the function call
