@@ -26,6 +26,7 @@ def checks_palind(word):
    
     print(f"{word} is a palindrome.")
 
+
 word = input("Enter a word: ")
 checks_palind(word)
 
