@@ -35,3 +35,19 @@ class specimen:
 b = specimen("user1",65) # we can acess the method not this
 n = b.sample("41") # we can acess the method via this
 print(b.sample(12))
+
+#exercise
+#__create a car class
+
+class Car:
+    def __init__(self, color, mileage):
+        self.__private_balance = 50
+        self.color = color
+        self.mileage = mileage
+    def __str__(self):
+        return f"The {self.color} car has {self.mileage:,} miles"
+    
+c = Car("red",24000)
+print(c)
+
+print(c._Car__private_balance)
