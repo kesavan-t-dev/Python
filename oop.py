@@ -173,20 +173,79 @@
 #     - Hierarchical Inheritance
 #     - Hybrid Inheritance
 # '''
-# #sample example for single inheritance
-# # parent class
-class Parent: 
-   def parentMethod(self):
-      print ("Calling parent method")
+# # #sample example for SINGLE inheritance
+# # # parent class
+# class Parent: 
+#    def parentMethod(self):
+#       print ("Calling parent method")
 
-# child class
-class Child(Parent): 
-   def childMethod(self):
-      print ("Calling child method")
+# # child class
+# class Child(Parent): 
+#    def childMethod(self):
+#       print ("Calling child method")
 
-# instance of child
-c = Child()  
-# calling method of child class
-c.childMethod() 
-# calling method of parent class
-c.parentMethod() 
+# # instance of child
+# c = Child()  
+# # calling method of child class
+# c.childMethod() 
+# # calling method of parent class
+# c.parentMethod() 
+
+
+#__Multiple inheritance
+# its can be used when you want to get the functionality of multiple classes into a single class
+# class Father:
+#     def skill1(self):
+#         print("Father's skill: Gardening")
+
+# class Mother:
+#     def skill2(self):
+#         print("Mother's skill: Cooking")
+
+# class Child(Father, Mother):
+#     pass
+# c = Child()
+# c.skill1()
+# c.skill2()
+# print(Child.mro())
+
+#output
+# Father's skill: Gardening
+# Mother's skill: Cooking
+
+#'''
+# if we multiple inheritance it create a diamond problem python will handle this mature like it has a mro method resolution order it is a c3 linearization algorithm and its is a depth first search algorithm
+# it helps to pick which class method call and override it and which one is first and with super we can use that and without super function we can also use that 
+#'''
+ 
+# without super or same functions in child how its works in the above u see the father and mother first we have a child class and then father and then mother it the correct order 
+
+#with super and its order 
+class A:
+    def show(self):
+        print("Class A")
+
+class B(A):
+    def show(self):
+        print("Class B")
+        super().show()
+
+class C(A):
+    def show(self):
+        print("Class C")
+        super().show()
+
+class D(B, C):
+    def show(self):
+        print("Class D")
+        super().show()
+
+d = D()
+d.show()
+
+#output 
+#Class D
+#Class B
+#Class C
+#Class A
+
