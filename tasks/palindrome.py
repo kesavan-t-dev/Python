@@ -15,19 +15,37 @@
 #     print(f"{word} Not Palindrome")
 
 #----Method_2
-def checks_palind(word):
-    word = word.lower()  
-    length = len(word)
+# def checks_palind(word):
+#     word = word.lower()  
+#     length = len(word)
     
-    for i in range(length // 2):  
-        if word[i] != word[length - i - 1]:
-            print(f"{word} is not a palindrome.")
-            return  
+#     for i in range(length // 2):  
+#         if word[i] != word[length - i - 1]:
+#             print(f"{word} is not a palindrome.")
+#             return  
    
-    print(f"{word} is a palindrome.")
+#     print(f"{word} is a palindrome.")
 
+
+# word = input("Enter a word: ")
+# checks_palind(word)
+
+#----Method_3
+def check(word):
+    i, j = 0, len(word) - 1  
+    is_palindrome = True  
+    while i < j:
+        if word[i] != word[j]:  
+            is_palindrome = False
+        break
+    i += 1
+    j -= 1
+
+    return is_palindrome
 
 word = input("Enter a word: ")
-checks_palind(word)
-
-    
+a = check(word)
+if(a == True):
+    print(f"{word} is a palindrome.")
+else:
+    print(f"{word} is not a palindrome.")
