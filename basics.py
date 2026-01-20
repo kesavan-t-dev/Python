@@ -406,6 +406,49 @@
 # Hello!
 # After the function call
 
+#property decorator 
+'''
+@property Decorator
+Purpose:
+Used to define managed attributes in classes — turning a method into a read-only or controlled attribute.
+When to Use:
+When you want getter/setter/deleter behavior without changing the attribute access syntax.
+Key Benefit:
+You can add logic (validation, computation, logging) when getting or setting an attribute without breaking existing code.
+
+'''
+# class Employee:
+#     def __init__(self, name, salary):
+#         self._name = name
+#         self._salary = salary
+
+#     @property
+#     def salary(self):
+#         """Getter for salary"""
+#         return self._salary
+
+#     @salary.setter
+#     def salary(self, value):
+#         """Setter with validation"""
+#         if value < 0:
+#             raise ValueError("Salary cannot be negative")
+#         self._salary = value
+
+# emp = Employee("John", 5000)
+# print(emp.salary)   # Access like an attribute
+# emp.salary = 6000   # Calls setter internally
+
+##with out inner function in decorator
+def simple_decorator(func):
+    print("Something is happening before the function is called.")
+    return func
+  
+@simple_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+
 #_______ Here is the actual example of decorator
 # def uppercase_decorator(function):
 #     def wrapper():
@@ -436,16 +479,17 @@
 # finally:
 #     pass
 
-try:
-    n =-4
-    print(n)
-except Exception as e:
-    print("the error is ",e)
-else:
-    print("this code is i accepted")
-finally:
-    print("this program run successfully")
+# try:
+#     n =-4
+#     print(n)
+# except Exception as e:
+#     print("the error is ",e)
+# else:
+#     print("this code is i accepted")
+# finally:
+#     print("this program run successfully")
 
-##this is an assertion error
-x = -1
-assert x > 0, "x should be positive"
+# ##this is an assertion error
+# x = -1
+# assert x > 0, "x should be positive"
+
