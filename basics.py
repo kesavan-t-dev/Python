@@ -423,6 +423,7 @@
 # OUTPUT:
 # 'HELLO THERE'
 
+#in Error  we use exception handling 
 ## Exception handling
 #_________
 try:

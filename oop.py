@@ -268,9 +268,7 @@ class Cloth:
     @classmethod 
     def showPrice(cls):
         return cls.price
-    @classmethod 
-    def showPrice(k7):
-        return k7.price
+
 
 # print(Cloth.showPrice(), "")  
 print(Cloth.show_price())
