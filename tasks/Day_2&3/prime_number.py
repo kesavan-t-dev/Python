@@ -24,29 +24,29 @@
 
 
 ##Method_2
-def primes_up_to_n(n, current=2, primes=0):
+def primes_up_to_n(n, current=2, primes=0, divisor=2):
+
     if primes == 0:
         primes = []
 
     if current > n:
         return primes
 
-    def is_prime(num, divisor=2):
-        if num < 2:
-            return False
-        if divisor * divisor > num:
-            return True
-        if num % divisor == 0:
-            return False
-        return is_prime(num, divisor + 1)
-
-    if is_prime(current):
+    
+    if divisor * divisor > current:  
         primes.append(current)
+        return primes_up_to_n(n, current + 1, primes, 2)
 
-    return primes_up_to_n(n, current + 1, primes)
+    if current % divisor == 0:  
+        return primes_up_to_n(n, current + 1, primes, 2)
 
-limit = int(input("Enter a positive integer (n): "))
-if limit < 2:
-    print("No prime numbers exist below 2.")
-else:
-    print(f"Prime numbers: {primes_up_to_n(limit)}")
+    return primes_up_to_n(n, current, primes, divisor + 1)
+
+try:
+    limit = int(input("Enter a positive integer (n): "))
+    if limit < 2:
+        print("No prime numbers exist below 2.")
+    else:
+        print(f"Prime numbers: {primes_up_to_n(limit)}")
+except ValueError:
+    print("Invalid input. Please enter an integer.")
