@@ -35,26 +35,21 @@
 # checks_palind(word)
 
 # #----Method_3
-def check(word):
-    def check(start, end):
-        while start < end and not word[start]:
-            start += 1
-        while start < end and not word[end]:
-            end -= 1
+def checks(word, start=0, end=0):
+    if end == 0:
+        end = len(word) - 1
 
-        if start >= end:
-            return True
+    if start >= end:
+        return True
 
-        if word[start] != word[end]:
-            return False
+    if word[start] != word[end]:
+        return False
 
-        return check(start + 1, end - 1)
-
-    return check(0, len(word) - 1)
+    return checks(word, start + 1, end - 1)  
 
 test_str = input("Enter a string: ")
 
-if check(test_str):
+if checks(test_str):
     print("Palindrome")
 else:
     print("Not Palindrome")
