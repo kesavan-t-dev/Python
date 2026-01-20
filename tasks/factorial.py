@@ -22,10 +22,8 @@
 
 def factorial(X):
     ans = 1
-
     for i in range(1, X + 1):
         ans *= i
-
     return ans
 
 X =  int(input("Enter a number: "))
