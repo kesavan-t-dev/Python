@@ -16,7 +16,7 @@
 def fact(n):
     org = n
     i = n - 1
-    for i in range(n,0,-1):
+    for i in range(n,1,-1):
         i -= 1
         if(i == 0):
             break

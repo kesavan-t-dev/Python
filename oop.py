@@ -221,27 +221,27 @@
 # without super or same functions in child how its works in the above u see the father and mother first we have a child class and then father and then mother it the correct order 
 
 #with super and its order 
-class A:
-    def show(self):
-        print("Class A")
+# class A:
+#     def show(self):
+#         print("Class A")
 
-class B(A):
-    def show(self):
-        print("Class B")
-        super().show()
+# class B(A):
+#     def show(self):
+#         print("Class B")
+#         super().show()
 
-class C(A):
-    def show(self):
-        print("Class C")
-        super().show()
+# class C(A):
+#     def show(self):
+#         print("Class C")
+#         super().show()
 
-class D(B, C):
-    def show(self):
-        print("Class D")
-        super().show()
+# class D(B, C):
+#     def show(self):
+#         print("Class D")
+#         super().show()
 
-d = D()
-d.show()
+# d = D()
+# d.show()
 
 #output 
 #Class D
@@ -249,3 +249,23 @@ d.show()
 #Class C
 #Class A
 
+#_______ Class method 
+# in this we use the instance method and class method
+class Cloth:
+    price = 4000
+
+    def __init__(self, price):
+        self.price = price
+
+    @classmethod
+    def show_price(self):
+        print("the price is ",self.price)
+
+    @classmethod 
+    def showPrice(cls):
+        return cls.price
+
+print(Cloth.showPrice())  
+print(Cloth.show_price())
+a = Cloth(10000)
+print(a.show_price())

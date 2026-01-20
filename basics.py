@@ -340,85 +340,97 @@
 
 ####------------ python generator ----------------
 #--normal function 
-def count(n):
-  return list(range(1,n+1))
+# def count(n):
+#   return list(range(1,n+1))
 
-numbers = count(4)
-print(numbers)
+# numbers = count(4)
+# print(numbers)
 
-#--generator function 
-def count_up_to(n):
-    count = 1
-    while count <= n:
-        yield count
-        count += 1
-# Using the generator
-counter = count_up_to(5)
+# #--generator function 
+# def count_up_to(n):
+#     count = 1
+#     while count <= n:
+#         yield count
+#         count += 1
+# # Using the generator
+# counter = count_up_to(5)
 
-print(next(counter))
-print(next(counter))
-print(next(counter))
-print(next(counter))
-#--to display output
-for num in counter:
-    # print(num)
-    pass
-#_______________we now know about inner function and closures
-"""
-in Decorator we must to know what is inner function and closure and then we can 
-understand the decorator 
-in INNER FUNCTION how its works
-A closure in Python is a function that remembers the environment in which it was created, 
-even after that environment is no longer active. This means a nested function can "close over" variables 
-from its enclosing scope and continue to use them.
+# print(next(counter))
+# print(next(counter))
+# print(next(counter))
+# print(next(counter))
+# #--to display output
+# for num in counter:
+#     # print(num)
+#     pass
+# #_______________we now know about inner function and closures
+# """
+# in Decorator we must to know what is inner function and closure and then we can 
+# understand the decorator 
+# in INNER FUNCTION how its works
+# A closure in Python is a function that remembers the environment in which it was created, 
+# even after that environment is no longer active. This means a nested function can "close over" variables 
+# from its enclosing scope and continue to use them.
 
-Closures are essential for understanding decorators because decorators rely on the ability 
-of a nested wrapper function to access and modify the state of the enclosing decorator function.
+# Closures are essential for understanding decorators because decorators rely on the ability 
+# of a nested wrapper function to access and modify the state of the enclosing decorator function.
 
-"""
-# _________ This is inner function sample
-def outer_function(message):
-    def inner_function():
-        print(f"Message from closure: {message}")
-    return inner_function
+# """
+# # _________ This is inner function sample
+# def outer_function(message):
+#     def inner_function():
+#         print(f"Message from closure: {message}")
+#     return inner_function
 
-closure_function = outer_function("Hello, closures!")
-closure_function()
-# Output: Message from closure: Hello, closures!
+# closure_function = outer_function("Hello, closures!")
+# closure_function()
+# # Output: Message from closure: Hello, closures!
 
 
 #then we move the decorator example
 #anology of a decorator
-def simple_decorator(func):
-    def wrapper():
-        print("Before the function call")
-        func()
-        print("After the function call")
-    return wrapper
+# def simple_decorator(func):
+#     def wrapper():
+#         print("Before the function call")
+#         func()
+#         print("After the function call")
+#     return wrapper
 
-@simple_decorator
-def greet():
-    print("Hello!")
+# @simple_decorator
+# def greet():
+#     print("Hello!")
 
-greet()
+# greet()
 # Output:
 # Before the function call
 # Hello!
 # After the function call
 
 #_______ Here is the actual example of decorator
-def uppercase_decorator(function):
-    def wrapper():
-        func = function()
-        make_uppercase = func.upper()
-        return make_uppercase
+# def uppercase_decorator(function):
+#     def wrapper():
+#         func = function()
+#         make_uppercase = func.upper()
+#         return make_uppercase
 
-    return wrapper
+#     return wrapper
 
-def say_hi():
-    return 'hello there'
+# def say_hi():
+#     return 'hello there'
 
-decorate = uppercase_decorator(say_hi)
-decorate()
+# decorate = uppercase_decorator(say_hi)
+# decorate()
 # OUTPUT:
 # 'HELLO THERE'
+
+## Exception handling
+#_________
+try:
+    n , nav =12
+    print("hellow")
+except Exception as e:
+    print("the error is ", e)
+else:
+    print("this is else block",n)
+finally:
+    pass
