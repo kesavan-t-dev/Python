@@ -256,16 +256,23 @@ class Cloth:
 
     def __init__(self, price):
         self.price = price
+    ##normal instance  method 
+    def show_price(self):
+        print("the price is ",self.price)
 
     @classmethod
-    def show_price(self):
+    def show_price(self): 
+        n = "name"
         print("the price is ",self.price)
 
     @classmethod 
     def showPrice(cls):
         return cls.price
+    @classmethod 
+    def showPrice(k7):
+        return k7.price
 
-print(Cloth.showPrice())  
+# print(Cloth.showPrice(), "")  
 print(Cloth.show_price())
-a = Cloth(10000)
-print(a.show_price())
+# a = Cloth(10000)
+# print(a.show_price())
