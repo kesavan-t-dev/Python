@@ -426,12 +426,26 @@
 #in Error  we use exception handling 
 ## Exception handling
 #_________
+# try:
+#     n , nav =12
+#     print("hellow")
+# except Exception as e:
+#     print("the error is ", e)
+# else:
+#     print("this is else block",n)
+# finally:
+#     pass
+
 try:
-    n , nav =12
-    print("hellow")
+    n =-4
+    print(n)
 except Exception as e:
-    print("the error is ", e)
+    print("the error is ",e)
 else:
-    print("this is else block",n)
+    print("this code is i accepted")
 finally:
-    pass
+    print("this program run successfully")
+
+##this is an assertion error
+x = -1
+assert x > 0, "x should be positive"
