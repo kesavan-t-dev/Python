@@ -1,7 +1,7 @@
 ## __ Write a function to print a list of prime numbers for a given input range (2 methods)
 #method_1
-# def p_num(number):
-#     assert number > 1 , "value must be greater than 1 "
+# def prime_num(number):
+#     # assert number > 1 , "value must be greater than 1 "
 #     primes = []
 #     num = 2  
 #     while num <= number:
@@ -20,7 +20,7 @@
   
 # number = int(input("Enter a number :"))
 
-# p_num(number)
+# prime_num(number)
 
 
 ##Method_2
