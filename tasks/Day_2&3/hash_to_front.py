@@ -6,18 +6,25 @@ Input: Move#Hash#to#Front
 Output: ###MoveHashtoFront
 """
 
-def move_hash(s):
-    arr = list(s)  
-    n = len(arr)
+#Method_1 using bubble sort little bit slow based on the input it takes more time TC - O(N^2)&SC - O(N) 
+class BubbleSort:
+    def move_hashes_to_front(self, s):
+        chars = list(s)
+        n = len(chars)
 
-    for i in range(n):
-        j = i
-        while j > 0 and arr[j] == '#':
-            arr[j], arr[j - 1] = arr[j - 1], arr[j]
-            j -= 1
+        for i in range(n):
+            for j in range(n - 1, i, -1):
+                if chars[j] == '#' and chars[j - 1] != '#':
+                    chars[j], chars[j - 1] = chars[j - 1], chars[j]
+        return "".join(chars)
 
-    return ''.join(arr)  
 
-text = "he#l#lllo#"
-print("Before:", text)
-print("After: ", move_hash(text))
+sorter = BubbleSort()
+
+input_str = "Move#Hash#to#Front"
+# input_str = input("enter a string with hashstags")
+print("\nBefore : ",input_str)
+result = sorter.move_hashes_to_front(input_str)
+print("After : ",result)
+
+
