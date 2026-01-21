@@ -37,22 +37,23 @@ Output: ###MoveHashtoFront
 def move_hash(s):
     arr = list(s)  
     n = len(arr)
-
+    print(n)
     for i in range(n):
         j = i
         while j > 0 and arr[j] == '#':
             a = arr[j], arr[j - 1] = arr[j - 1], arr[j]
-            print(a)
+            # print(a)
             j -= 1
-        print(i, j, arr)
+        # print(i, j, arr)
     return ''.join(arr)  
 
-text = "Move#Hash#to#Front"
+text = "M##M"
 # text = input("Enter a string/Number with hashstags:")
 
 print("Before:", text)
 print("After: ", move_hash(text))
 
+#____________________________________________________________________________________________
 # #Method_3 using new list to store and append that string
 # def move_hash_append(s):
 #     result = []
@@ -73,6 +74,7 @@ print("After: ", move_hash(text))
 
 # print("\nBefore: Move#Hash#to#Front ", "\nafter:",move_hash_append("Move#Hash#to#Front"))
 
+#____________________________________________________________________________________________
 # #Method_4 using slicing from left to right store them 
 # def move_hash_reverse_fill(s):
 #     n = len(s)
