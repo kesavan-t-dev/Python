@@ -9,6 +9,7 @@
 
 ## **Step 1 — Initial Setup**
 
+We have:
 
 ```
 Input:  M  o  v  e  #  H  a  s  h  #  t  o  #  F  r  o  n  t
