@@ -49,21 +49,42 @@ Output: ###MoveHashtoFront
 # print("After: ", move_hash(text))
 
 # #Method_3 using new list to store and append that string
-def move_hash_manual_append(s):
-    result = []
-    hash_count = 0
+# def move_hash_append(s):
+#     result = []
+#     hash_count = 0
     
+#     for ch in s:
+#         if ch == '#':
+#             hash_count += 1
+    
+#     for _ in range(hash_count):
+#         result.append('#')
+    
+#     for ch in s:
+#         if ch != '#':
+#             result.append(ch)
+    
+#     return "".join(result)
+
+# print("\nBefore: Move#Hash#to#Front ", "\nafter:",move_hash_append("Move#Hash#to#Front"))
+
+# #Method_4 using slicing from left to right store them 
+def move_hash_reverse_fill(s):
+    n = len(s)
+    result = [""] * n 
+    left = 0          
+    right = n - 1     
+
     for ch in s:
         if ch == '#':
-            hash_count += 1
-    
-    for _ in range(hash_count):
-        result.append('#')
-    
-    for ch in s:
-        if ch != '#':
-            result.append(ch)
-    
-    return "".join(result)
+            result[left] = '#'
+            left += 1
+        else:
+            result[right] = ch
+            right -= 1
 
-print("\nBefore: Move#Hash#to#Front ", "\nafter:",move_hash_manual_append("Move#Hash#to#Front"))
+    hash_part = result[:left]
+    non_hash_part = result[left:][::-1]
+    return "".join(hash_part + non_hash_part)
+
+print("\nBefore: Move#Hash#to#Front ", "\nafter:",move_hash_reverse_fill("Move#Hash#to#Front"))
