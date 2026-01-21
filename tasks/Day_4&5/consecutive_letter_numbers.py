@@ -36,17 +36,36 @@ Output: a2b4e4f2g3
 
 
 #Method_2 
-def compress_two(s):
-    start = 0
+# def compress_two(s):
+#     start = 0
+#     result = ""
+#     while start < len(s):
+#         end = start
+#         while end < len(s) and s[end] == s[start]:
+#             end += 1
+#         result += s[start] + str(end - start)
+#         start = end
+#     return result
+
+# print(compress_two("aabbeefg"))  
+
+
+#Method_3
+def compress_stack(s):
+    stack = []
+    for ch in s:
+        if stack and stack[-1][0] == ch:
+            stack[-1][1] += 1
+            print( stack[-1][1])
+        else:
+            stack.append([ch, 1])
+            print(stack)
     result = ""
-    while start < len(s):
-        end = start
-        while end < len(s) and s[end] == s[start]:
-            end += 1
-        result += s[start] + str(end - start)
-        start = end
+    for ch, cnt in stack:
+        result += ch + str(cnt)
+        print(result)      
+
+    print(result)    
     return result
 
-print(compress_two("aabbeefg"))  
-
-
+print(compress_stack("aabbbbeeeeffggg"))  # a2b4e4f2g3
