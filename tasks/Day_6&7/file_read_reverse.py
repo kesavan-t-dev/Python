@@ -85,3 +85,8 @@ except Exception as e :
     print(e)
 else:
     content.close()
+
+
+writes = open("D:/Training/Tasks/Python/tasks/Day_6&7/input.txt","w")
+context = writes.write("this is write")
+print(context)
