@@ -42,16 +42,17 @@ Output: a2b4e4f2g3
 def compress_string(s):
     if not s: return ""
     chars, counts = [], []
+    n = len(chars)
     for ch in s:
         idx = -1
-        for i in range(len(chars)):
+        for i in range(n):
             if chars[i] == ch: idx = i; break
         if idx != -1:
             counts[idx] += 1
         else:
             chars.append(ch)
             counts.append(1)
-    return "".join(chars[i] + str(counts[i]) for i in range(len(chars)))
+    return "".join(chars[i] + str(counts[i]) for i in range(n))
 
 n = input("enter a word:")
 print(compress_string(n)) #output : a3b2c1132231

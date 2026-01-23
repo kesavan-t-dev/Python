@@ -16,7 +16,6 @@ Write a code to get the count of vowels in given string (2 methods) no inbuilt f
 #                 count += 1
 #     return count
     
-
 # user_input = input("Enter a string: ")
 # print("Vowel count:", count_vowels(user_input))
 
@@ -53,7 +52,6 @@ def count_vowels(text):
                 case _:
                     pass
     return count
-
 
 user_input = input("Enter a string: ")
 print("Vowel count:", count_vowels(user_input))

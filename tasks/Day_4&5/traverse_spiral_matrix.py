@@ -19,26 +19,17 @@ output:
 #     dc = [1, 0, -1, 0]
 #     r, c = 0, 0
 #     idx = 0
-
 #     for _ in range(m * n):
-
 #         res.append(mat[r][c])
 #         print(res)
 #         visited[r][c] = True
-
 #         newR, newC = r + dr[idx], c + dc[idx]
-
 #         if 0 <= newR < m and 0 <= newC < n and not visited[newR][newC]:
 #             r, c = newR, newC
-    
 #         else:
-    
 #             idx = (idx + 1) % 4
-    
 #             r += dr[idx]
-    
 #             c += dc[idx]
-    
 #     return res
 
 # mat = [ 
