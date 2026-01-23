@@ -26,17 +26,20 @@ Given a positive integer num, write a function that returns True if num is a per
 # print(perfect_square(n))
 
 #Method_2
-# def perfect_square(num):
+def perfect_square(num):
 
-#     if num < 1:
-#         return False
+    if num < 1:
+        return False
 
-#     odd = 1
-#     while num > 0:
-#         num -= odd
-#         odd += 2
+    odd = 1
+    while num > 0:
+        num -= odd
+        odd += 2
 
-#     return num == 0
+    return num == 0
 
-# n = int(input("Enter a number:"))
-# print(perfect_square(n))
+    # if (num**0.5)%1==0: return True
+    # else: return False
+
+n = int(input("Enter a number:"))
+print(perfect_square(n))

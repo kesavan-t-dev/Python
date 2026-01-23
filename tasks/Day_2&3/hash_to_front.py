@@ -8,24 +8,24 @@ Output: ###MoveHashtoFront
 
 #____________________________________________________________________________________________
 #Method_1 using insertion sort
-# def move_hash(s):
-#     arr = list(s)  
-#     n = len(arr)
-#     print(n)
-#     for i in range(n):
-#         j = i
-#         while j > 0 and arr[j] == '#':
-#             a = arr[j], arr[j - 1] = arr[j - 1], arr[j]
-#             # print(a)
-#             j -= 1
-#         # print(i, j, arr)
-#     return ''.join(arr)  
+def move_hash(s):
+    arr = list(s)  
+    n = len(arr)
+    print(n)
+    for i in range(n):
+        j = i
+        while j > 0 and arr[j] == '#':
+            a = arr[j], arr[j - 1] = arr[j - 1], arr[j]
+            # print(a)
+            j -= 1
+        # print(i, j, arr)
+    return ''.join(arr)  
 
-# text = "Move#Hash#to#Front"
-# # text = input("Enter a string/Number with hashstags:")
+text = "Move#Hash#to#Front"
+# text = input("Enter a string/Number with hashstags:")
 
-# print("Before:", text)
-# print("After: ", move_hash(text))
+print("Before:", text)
+print("After: ", move_hash(text))
 
 #____________________________________________________________________________________________
 # #Method_2 using new list to store and append that string
