@@ -37,8 +37,19 @@ n = int(input("Enter a Digit:"))
 print("Before reverse:", n, "\nAfter Reverse:", reverse_integer(n))
 
 #Method_3 use slice
-def reverse_integer(n):
-    lists = str(n)
-    reverse_str = lists[::-1] 
-    return reverse_str
-print(reverse_integer(1234))
+def reverse_integer_recursive(n, left=None, right=None):
+    if left is None and right is None:
+        n = list(str(n))
+        return int("".join(reverse_integer_recursive(n, 0, len(n) - 1)))
+
+    if left >= right:
+        return n
+
+    n[left], n[right] = n[right], n[left]
+
+    return reverse_integer_recursive(n, left + 1, right - 1)
+
+
+
+num = int(input("Enter a Digit: "))
+print("Before reverse:", num, "\nAfter Reverse:", reverse_integer_recursive(num))
