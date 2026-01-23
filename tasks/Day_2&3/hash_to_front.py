@@ -29,7 +29,7 @@ Output: ###MoveHashtoFront
 
 #____________________________________________________________________________________________
 # #Method_2 using new list to store and append that string
-# def move_hash_append(s):
+# def move_hash(s):
 #     result = ""
 #     hash_count = 0
     
@@ -46,11 +46,14 @@ Output: ###MoveHashtoFront
 #     # print(result)
 #     return result
 
-# print("\nBefore: Move#Hash#to#Front ", "\nafter:",move_hash_append("Move#Hash#to#Front"))
+# text = "Move#Hash#to#Front"
+# # text = input("Enter a string/Number with hashstags:")
 
+# print("Before:", text)
+# print("After: ", move_hash(text))
 #____________________________________________________________________________________________
 # #Method_3 using slicing from left to right store them 
-# def move_hash_reverse_fill(s):
+# def move_hash(s):
 #     n = len(s)
 #     result = [""] * n 
 #     left = 0          
@@ -68,11 +71,14 @@ Output: ###MoveHashtoFront
 #     non_hash_part = result[left:][::-1]
 #     return "".join(hash_part + non_hash_part)
 
-# print("\nBefore: Move#Hash#to#Front ", "\nafter:",move_hash_reverse_fill("Move#Hash#to#Front"))
+# text = "Move#Hash#to#Front"
+# # text = input("Enter a string/Number with hashstags:")
 
+# print("Before:", text)
+# print("After: ", move_hash(text))
 #________________________________________________________________________________________________________
 #Method_4
-def move_hash_reverse(s):
+def move_hash(s):
     n = len(s)
     result = [""] * n
     left = 0           
@@ -88,6 +94,8 @@ def move_hash_reverse(s):
 
     return "".join(result)
 
+# text = "Move#Hash#to#Front"
+# # text = input("Enter a string/Number with hashstags:")
 
-print("\nBefore: Move#Hash#to#Front",
-      "\nAfter :", move_hash_reverse("Move#Hash#to#Front"))
+# print("Before:", text)
+# print("After: ", move_hash(text))
