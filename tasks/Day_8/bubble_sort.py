@@ -3,17 +3,18 @@ Bubble sort (ascending order) ( 2 methods )
 """
 
 #Method_1 
-def bubble_sort(array):
-  for i in range(len(array)):
-    for j in range(0, len(array) - i - 1):
-      if array[j] > array[j + 1]:
-        temp = array[j]
-        array[j] = array[j+1]
-        array[j+1] = temp
+def bubble_sort(lst):
+  size = len(lst)
+  for i in range(size):
+    for j in range(size - 1):
+      if lst[j] > lst[j + 1]:
+        lst[j], lst[j + 1] = lst[j + 1], lst[j]
+
+  return lst
 
 
 data = [-2, 45, 0, 11, -9]
-
+print("Unsorted Array:",data)
 bubble_sort(data)
 
 print('Sorted Array in Ascending Order:')
