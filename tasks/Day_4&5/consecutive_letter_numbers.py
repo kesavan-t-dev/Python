@@ -9,12 +9,12 @@ Output: a2b4e4f2g3
 
 #Method_1 count and reset count 
 # def compress_string(s):
-#     print(s)
+#     # print(s)
 #     result = ""
 #     count = 1
 
 #     for i in range(1, len(s)):
-#         print(i)    
+#         # print(i)    
 #         if s[i] == s[i - 1]:
 #             count += 1
 #             # a = s[i]
@@ -30,9 +30,8 @@ Output: a2b4e4f2g3
 #     # print("result :",result)
 #     return result
 
-# input = "aabbbbeeeeffggg"
-# # input = "aabb"
-# print(compress_string(input))
+# # input = "aabbca1123123" #it will not show correct output change the logic for this sligh correct but keep the structurelike check the i -1 u can use annother for loop give with correct changes
+# print(compress_string(input)) #output : a3b2c1132231
 
 
 #Method_2 
@@ -46,26 +45,27 @@ Output: a2b4e4f2g3
 #         result += s[start] + str(end - start)
 #         start = end
 #     return result
-
-# print(compress_two("aabbeefg"))  
+# n = input("enter a word:")
+# print(compress_two(n))  
 
 
 #Method_3
-def compress_stack(s):
-    stack = []
-    for ch in s:
-        if stack and stack[-1][0] == ch:
-            stack[-1][1] += 1
-            print( stack[-1][1])
-        else:
-            stack.append([ch, 1])
-            print(stack)
-    result = ""
-    for ch, cnt in stack:
-        result += ch + str(cnt)
-        print(result)      
+# def compress_stack(s):
+#     stack = []
+#     for ch in s:
+#         if stack and stack[-1][0] == ch:
+#             stack[-1][1] += 1
+#             # print( stack[-1][1])
+#         else:
+#             stack.append([ch, 1])
+#             # print(stack)
+#     result = ""
+#     for ch, cnt in stack:
+#         result += ch + str(cnt)
+#         # print(result)      
 
-    print(result)    
-    return result
+#     # print(result)    
+#     return result
 
-print(compress_stack("aabbbbeeeeffggg"))  # a2b4e4f2g3
+# n = input("enter a word:")
+# print(compress_stack(n))  # a2b4e4f2g3

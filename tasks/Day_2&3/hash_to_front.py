@@ -35,9 +35,7 @@ Output: ###MoveHashtoFront
     
 #     for ch in s:
 #         if ch == '#':
-#             hash_count += 1
-    
-    
+#             hash_count += 1   
 #     result = '#' *hash_count
     
 #     for ch in s:
@@ -94,8 +92,8 @@ def move_hash(s):
 
     return "".join(result)
 
-# text = "Move#Hash#to#Front"
-# # text = input("Enter a string/Number with hashstags:")
+text = "Move#Hash#to#Front"
+# text = input("Enter a string/Number with hashstags:")
 
-# print("Before:", text)
-# print("After: ", move_hash(text))
+print("Before:", text)
+print("After: ", move_hash(text))
