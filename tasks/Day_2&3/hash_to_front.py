@@ -77,20 +77,16 @@ print("After: ", move_hash(text))
 #________________________________________________________________________________________________________
 #Method_4
 def move_hash(s):
-    n = len(s)
-    result = [""] * n
-    left = 0           
-    right = left + s.count('#')  
+    hashes = []   
+    chars = []    
 
     for ch in s:
         if ch == '#':
-            result[left] = '#'
-            left += 1
+            hashes.append(ch)
         else:
-            result[right] = ch
-            right += 1
+            chars.append(ch)
 
-    return "".join(result)
+    return "".join(hashes + chars) 
 
 text = "Move#Hash#to#Front"
 # text = input("Enter a string/Number with hashstags:")
