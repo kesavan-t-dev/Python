@@ -18,3 +18,27 @@ def reverse_integer(n):
 
 n = int(input("Enter a Digit:"))
 print("Before reverse :",n,"\n After Reverse: ",reverse_integer(n))
+
+#Method_2 use two pointer to swap last and first 
+def reverse_integer(n):
+    lists = list(str(n))
+    left, right = 0, len(lists) - 1
+
+    while left < right:
+        lists[left], lists[right] = lists[right], lists[left]
+        left += 1
+        right -= 1
+
+    reversed_number = int("".join(lists))
+    return reversed_number
+
+
+n = int(input("Enter a Digit:"))
+print("Before reverse:", n, "\nAfter Reverse:", reverse_integer(n))
+
+#Method_3 use slice
+def reverse_integer(n):
+    lists = str(n)
+    reverse_str = lists[::-1] 
+    return reverse_str
+print(reverse_integer(1234))
