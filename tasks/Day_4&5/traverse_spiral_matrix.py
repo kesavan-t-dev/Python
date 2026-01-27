@@ -10,7 +10,7 @@ output:
 
 
 #Method_1 index based 
-# def spirallyTraverse(mat):
+# def spirally_traverse(mat):
 #     m = len(mat)
 #     n = len(mat[0])
 #     res = []
@@ -37,7 +37,7 @@ output:
 #         [7,   8,   9,  10,  11,  12],  
 #         [13,  14,  15, 16,  17,  18]
 #       ]
-# print(spirallyTraverse(mat))
+# print(spirally_traverse(mat))
 
 """
         print("n value :",n)
@@ -57,7 +57,7 @@ output:
 """
 
 #Method_2 top left right bottom
-# def spirallyTraverse(mat):
+# def spirally_traverse(mat):
 #     m, n = len(mat), len(mat[0])
 #     res = []
 #     top, bottom, left, right = 0, m - 1, 0, n - 1
@@ -82,10 +82,10 @@ output:
 #         [7,   8,   9,  10,  11,  12],  
 #         [13,  14,  15, 16,  17,  18]
 #       ]
-# print(spirallyTraverse(mat))
+# print(spirally_traverse(mat))
 
 #Method_3 using dictionaries to iterate the values 
-def spiralOrder(matrix):
+def spiral_order(matrix):
     nextDirection = {
         'top': 'right',
         'right': 'bottom',
@@ -124,5 +124,5 @@ matrix = [
             [13,  14,  15, 16,  17,  18]
          ]
 
-result = spiralOrder(matrix)
+result = spiral_order(matrix)
 print(result)
