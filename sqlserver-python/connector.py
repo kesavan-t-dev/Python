@@ -36,6 +36,7 @@ def connect_to_mssql(server, database, username, password, driver="{ODBC Driver 
 
 
 if __name__ == "__main__":
+    
     load_dotenv()
     server = os.getenv('DB_SERVER')
     database = os.getenv('DB_NAME')
