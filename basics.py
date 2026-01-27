@@ -438,16 +438,16 @@ You can add logic (validation, computation, logging) when getting or setting an 
 # print(emp.salary)   # Access like an attribute
 # emp.salary = 6000   # Calls setter internally
 
-##with out inner function in decorator
-def simple_decorator(func):
-    print("Something is happening before the function is called.")
-    return func
+# ##with out inner function in decorator
+# def simple_decorator(func):
+#     print("Something is happening before the function is called.")
+#     return func
   
-@simple_decorator
-def say_hello():
-    print("Hello!")
+# @simple_decorator
+# def say_hello():
+#     print("Hello!")
 
-say_hello()
+# say_hello()
 
 #_______ Here is the actual example of decorator
 # def uppercase_decorator(function):
