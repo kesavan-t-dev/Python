@@ -20,8 +20,6 @@ Bubble sort (ascending order) ( 2 methods )
 # print('Sorted Array in Ascending Order:')
 # print(data)
 
-
-
 #Method_2 
 def bubble_sort(arr):
     n = len(arr)
