@@ -7,27 +7,11 @@ Output: a2b4e4f2g3
 (3 methods ) without using inbuilt functions 
 """
 
-#Method_1 count and reset count 
-def compress_string(s):
-    if not s:
-        return ""
-
-    result = ""
-    for ch in s:
-        if ch not in result:
-            count = 0
-            for c in s:
-                if c == ch:
-                    count += 1
-            result += ch + str(count)
-
-    return result
-
-input = input("Enter:")
-print(compress_string(input)) #output : a3b2c1132231
 
 
-# #Method_2 
+
+
+# #Method_1 
 # def compress_string(s):
 #     chars, counts = [], []
 #     n = len(chars)
@@ -44,24 +28,46 @@ print(compress_string(input)) #output : a3b2c1132231
 #             counts.append(1)
 #     return "".join(chars[i] + str(counts[i]) for i in range(n))
 
-# n = input("enter a word:")
+# n = input("enter a word:") #aabbbbeeeeffaggg
+# n = "aabbbbeeeeffaggg"
 # print(compress_string(n)) #output : a3b2c1132231
 
-#Method_3
-# def compress_stack(s):
-#     stack = [] 
-#     for ch in s:
-#         found = False
-#         for item in stack:
-#             if item[0] == ch:
-#                 item[1] += 1
-#                 found = True
-#                 break
-#         if not found:
-#             stack.append([ch, 1])  
+# def compress_string(s):
+#     freq = {}
+#     order = []
 
-#     result = "".join(ch + str(cnt) for ch, cnt in stack)
+#     for ch in s:
+#         if ch not in freq:
+#             freq[ch] = 0
+#             order.append(ch)
+#         freq[ch] += 1
+
+#     result = ""
+#     for ch in order:
+#         result += ch + str(freq[ch])
 #     return result
 
-# n = input("enter a word:")
-# print(compress_stack(n))  
+# n = input("enter a word:") #aabbbbeeeeffaggg
+# n = "aabbbbeeeeffaggg"
+# print(compress_string(n)) 
+
+
+#Method_3 ascii
+# def compress_string(s):
+#     freq = [0] * 256  
+#     order = []        
+
+#     for ch in s:
+#         ascii_val = ord(ch)
+#         if freq[ascii_val] == 0:
+#             order.append(ch)
+#         freq[ascii_val] += 1
+
+#     result = ""
+#     for ch in order:
+#         result += ch + str(freq[ord(ch)])
+#     return result
+
+# n = input("enter a word:") #aabbbbeeeeffaggg
+# n = input("Enter:")  # aabbbbeeeeffaggg
+# print(compress_string(n))  # Output: a3b5e4f2g3
