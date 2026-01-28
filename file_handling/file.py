@@ -31,10 +31,10 @@ print(b)
 
 #check file is existed or not
 #version using exists
-if os.path.exists("data/customers_usa.csv"):
-   print("Path exists.")
+if os.path.exists("customers_usa.csv"):
+   print("File exists.")
 else:
-   print("Path does not exist.")
+   print("File does not exist.")
 
 #version two using isfile method
 file_path = "data/customers_usa.csv"
