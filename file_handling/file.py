@@ -27,3 +27,25 @@ print(b)
 
 # #remove the file 
 # os.remove('D:/Training/Tasks/Python/file_handling/samples.txt')
+
+
+#check file is existed or not
+#version using exists
+if os.path.exists("data/customers_usa.csv"):
+   print("Path exists.")
+else:
+   print("Path does not exist.")
+
+#version two using isfile method
+file_path = "data/customers_usa.csv"
+if os.path.isfile(file_path):
+   print(f"{file_path} exists and is a file.")
+else:
+   print(f"{file_path} does not exist or is not a file.")
+
+## version three using try except using file not found error    
+try:
+   with open("data/customers_usa.txt", "r") as f:
+       print("File opened successfully.")
+except FileNotFoundError:
+   print("File does not exist.")
