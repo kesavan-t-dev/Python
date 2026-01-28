@@ -32,11 +32,7 @@ def remove_middle(arr):
     if not arr:
         return []
     
-    length = 0
-
-    for _ in arr:
-        length += 1
-
+    length = len(arr)
 
     if length % 2 == 1:
         mid1 = length // 2
