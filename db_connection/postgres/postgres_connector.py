@@ -23,7 +23,6 @@ try:
             price NUMERIC(10, 2) NOT NULL
         );
     """)
-    connection.commit()
 
     products = [
         ("Laptop", 1200.50),
@@ -34,13 +33,11 @@ try:
         "INSERT INTO products (name, price) VALUES (%s, %s)",
         products
     )
-    connection.commit()
 
     cursor.execute(
         "UPDATE products SET price = %s WHERE name = %s",
         (1300.00, "Laptop")
     )
-    connection.commit()
 
     cursor.execute("SELECT * FROM products")
     for row in cursor.fetchall():

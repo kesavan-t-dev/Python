@@ -31,17 +31,14 @@ def main():
         ("Keyboard", 45.00)
     ]
     cursor.executemany("INSERT INTO dbo.Products (name, price) VALUES (?, ?)", products)
-    conn.commit()
 
     cursor.execute("UPDATE dbo.Products SET price = ? WHERE name = ?", (1300.00, "Laptop"))
-    conn.commit()
 
     cursor.execute("SELECT * FROM dbo.Products")
     for row in cursor.fetchall():
         print(row) 
 
     cursor.execute("DELETE FROM dbo.Products WHERE name = ?", ("Mouse",))
-    conn.commit()
 
     cursor.execute("SELECT COUNT(*) FROM dbo.Products")
     count = cursor.fetchone()[0]
