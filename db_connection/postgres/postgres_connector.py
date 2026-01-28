@@ -1,7 +1,6 @@
 """
 Docstring for db_connection.postgres.connector
 """
-
 import pg8000
 
 try:
@@ -48,7 +47,10 @@ try:
         print(row)
 
     cursor.close()
-    connection.close()
+
 
 except Exception as e:
     print("An error occurred:", e)
+finally:
+    connection.close()
+    print("Postgres connection closed!")

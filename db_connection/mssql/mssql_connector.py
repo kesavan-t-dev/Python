@@ -1,3 +1,6 @@
+"""
+Docstring for db_connection.mssql.mssql_connector
+"""
 import pyodbc
 
 def main():
