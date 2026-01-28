@@ -47,5 +47,5 @@ else:
 try:
    with open("data/customers_usa.txt", "r") as f:
        print("File opened successfully.")
-except FileNotFoundError:
-   print("File does not exist.")
+except FileNotFoundError as e:
+   print(e)
