@@ -45,7 +45,7 @@ else:
 
 ## version three using try except using file not found error    
 try:
-   with open("data/customers_usa.txt", "r") as f:
-       print("File opened successfully.")
+   with open("D:/Training/Tasks/Python/file_handling/sales.txt", "r") as f:
+      print("File opened successfully.")
 except FileNotFoundError as e:
    print(e)
