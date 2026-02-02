@@ -15,7 +15,7 @@ print("key value:",key)
 f = Fernet(key)
 print("f value:",f)
 # the plaintext is converted to ciphertext
-token = f.encrypt(b"welcome to geeksforgeeks")
+token = f.encrypt(b"welcome !")
 
 # display the ciphertext
 print("token value after encrypt:",token)
