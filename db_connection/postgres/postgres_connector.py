@@ -1,10 +1,10 @@
 """
 Docstring for db_connection.postgres.connector
 """
-import pg8000
+import psycopg2
 
 try:
-    connection = pg8000.connect(
+    connection = psycopg2.connect(
         user="postgres",
         password="root",
         host="localhost",
